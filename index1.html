@@ -4,17 +4,27 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<style type="text/css">
+			.class1{
+				background:#444;
+				color:#eee;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app">
-			<p>{{message}}</p>
+			<label for="r1">修改颜色</label><input type="checkbox" v-model="class1" id="r1">
+			<br />
+			<div v-bind:class="{'class1':class1}">
+				directiva v-bind:class
+			</div>
 		</div>
 		<!--数据绑定最常见的形式就是使用 {{...}}（双大括号）的文本插值：-->
 		<script type="text/javascript">
 			new Vue({
 				el:'#app',
 				data:{
-					message:'Hello Vue.js!'
+					class1:false
 				}
 			});
 		</script>
