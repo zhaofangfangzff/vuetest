@@ -2,14 +2,15 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>v-for迭代对象</title>
+		<title>v-for1</title>
 		<script type="text/javascript" src="js/vue.min.js" ></script>
 	</head>
 	<body>
+		<body>
 		<div id="app">
 			<ul>
-				<li v-for="value in object">
-					{{value}}
+				<li v-for="(value,key,index) in object">
+					{{key}}:{{value}}:{{index}}
 				</li>
 			</ul>
 		</div>

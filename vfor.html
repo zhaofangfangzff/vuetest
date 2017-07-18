@@ -2,26 +2,26 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>v-for迭代对象</title>
+		<title>v-for</title>
 		<script type="text/javascript" src="js/vue.min.js" ></script>
 	</head>
 	<body>
 		<div id="app">
-			<ul>
-				<li v-for="value in object">
-					{{value}}
+			<ol>
+				<li v-for="site in sites">
+					{{site.name}}
 				</li>
-			</ul>
+			</ol>
 		</div>
 		<script type="text/javascript">
 			new Vue({
 				el:'#app',
 				data:{
-					object:{
-						name:'菜鸟教程',
-						url:'http://www.runoob.com',
-						slogan:'学的不仅是技术，更是梦想'
-					}
+					sites:[
+						{name:'Runoob'},
+						{name:'Goole'},
+						{name:'Taobao'}
+					]
 				}
 			})
 		</script>
